@@ -36,6 +36,11 @@ public class Car  extends Device implements Saleable{
 
     @Override
     public void sell(Human seller, Human buyer, Double price) {
+       if(buyer.cash >=price){
+           System.out.println("możesz kupic!");
+       }else{
+           System.out.println("transkacja nie możliwa");
 
+       }
     }
 }

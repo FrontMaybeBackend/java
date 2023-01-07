@@ -6,11 +6,12 @@ import device.Phone;
 public class Human  extends Animal {
     String firstName;
     String lastName;
-    Car car;
+   public Car car;
     Phone phone;
     Animal pet;
+
     Double salary;
-    Double cash;
+    public Double cash;
 
      public Human (String firstName){
          super("homo sapiens");
@@ -18,6 +19,7 @@ public class Human  extends Animal {
          this.firstName = firstName;
          this.weight = 70.0;
      }
+
 
 
 }

@@ -59,6 +59,9 @@ public class Main {
         audi.turnOn();
         xiaomi.turnOn();
 
+
+
+
     }
 
 }

@@ -1,5 +1,7 @@
 package device;
 
+import creatures.Human;
+
 public abstract class Device {
         String model;
         String yearOfproduction;
@@ -21,4 +23,6 @@ public abstract class Device {
         }
 
         public abstract void turnOn();
+
+
 }
