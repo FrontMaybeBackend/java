@@ -20,7 +20,7 @@ public class Animal {
     public void takeForAWalk(){
         if(this.alive == true) {
 
-            this.weight -= 0.5;
+            this.weight -= 0.3;//
 
         System.out.println(this.name +" zostal zabrany na spacer jego aktualna waga to: " + this.weight);
             if (this.weight <= 0)
