@@ -1,7 +1,8 @@
 package device;
 
+import creatures.Human;
 import  device.Device;
-public class Car  extends Device{
+public class Car  extends Device implements Saleable{
    public String color;
 
      public String fuelType;
@@ -31,5 +32,10 @@ public class Car  extends Device{
         System.out.println("Przekręcam kluczyk");
         System.out.println("Przekręcam kluczyk");
         System.out.println("Odpalam");
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+
     }
 }

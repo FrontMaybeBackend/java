@@ -1,7 +1,7 @@
+import creatures.Animal;
+import creatures.Human;
 import device.Car;
 import device.Phone;
-
-import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) {

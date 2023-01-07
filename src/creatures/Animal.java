@@ -1,3 +1,5 @@
+package creatures;
+
 public class Animal {
     String species;
     String name;
@@ -36,4 +38,6 @@ public class Animal {
         }
 
     }
+
+
 }
