@@ -1,9 +1,9 @@
 import  device.Device;
 public class Car  extends Device{
-    String color;
+   public String color;
 
-    String fuelType;
-    Double millage;
+     public String fuelType;
+     public Double millage;
 
     public Car(String producer, String model, Integer yearOfProduction, String fuelType, String color) {
         super("Audi", " 2010 ", "vw");

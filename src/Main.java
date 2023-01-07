@@ -45,10 +45,9 @@ public class Main {
         System.out.println(kacper.weight);
         System.out.println(kacper.species);
 
-        Phone xiaomi  = new Phone ("Xiaomi" , "2" , "android", "ada");
+        Phone xiaomi  = new Phone ("Xiaomi" , 2.0 , "android", "ada");
 
-        System.out.println("model : " + xiaomi.model);
-        System.out.println("producer: " + xiaomi.producer);
+
         System.out.println("ScreenSize: " + xiaomi.screenSize);
         System.out.println("System: " + xiaomi.Os);
 
