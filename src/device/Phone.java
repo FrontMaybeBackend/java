@@ -1,3 +1,5 @@
+package device;
+
 import  device.Device;
 
 public class Phone extends Device  {
@@ -15,9 +17,20 @@ public class Phone extends Device  {
 
     @Override
     public String toString() {
-        return "Phone{" +
+        return "device.Phone{" +
                 "screenSize=" + screenSize +
                 ", Os='" + Os + '\'' +
                 '}';
+    }
+
+
+    public  void turnOn() {
+        System.out.println("Wciskam przycisk");
+        System.out.println("Czekam");
+        System.out.println("Czekam");
+        System.out.println("Czekam");
+        System.out.println("Czekam");
+        System.out.println("Czekam");
+        System.out.println("Działa");
     }
 }

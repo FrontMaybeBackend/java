@@ -1,3 +1,5 @@
+package device;
+
 import  device.Device;
 public class Car  extends Device{
    public String color;
@@ -17,10 +19,17 @@ public class Car  extends Device{
 
     @Override
     public String toString() {
-        return "Car{" +
+        return "device.Car{" +
                 "color='" + color + '\'' +
                 ", fuelType='" + fuelType + '\'' +
                 ", millage=" + millage +
                 '}';
+    }
+
+
+    public void turnOn() {
+        System.out.println("Przekręcam kluczyk");
+        System.out.println("Przekręcam kluczyk");
+        System.out.println("Odpalam");
     }
 }

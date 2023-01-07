@@ -1,12 +1,17 @@
+import device.Car;
+import device.Phone;
+
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
 
-        Car Audi = new Car("vw", "passat", 2001, "diesel", "blue");
-        Audi.millage = 70000.0;
+        Car audi = new Car("vw", "passat", 2001, "diesel", "blue");
+        audi.millage = 70000.0;
 
-        System.out.println("Producent: " + Audi.color);
-        System.out.println("Typ Paliwa: " + Audi.fuelType);
-        System.out.println("Przebieg: " + Audi.millage);
+        System.out.println("Producent: " + audi.color);
+        System.out.println("Typ Paliwa: " + audi.fuelType);
+        System.out.println("Przebieg: " + audi.millage);
 
 
 
@@ -45,13 +50,14 @@ public class Main {
         System.out.println(kacper.weight);
         System.out.println(kacper.species);
 
-        Phone xiaomi  = new Phone ("Xiaomi" , 2.0 , "android", "ada");
+        Phone xiaomi  = new Phone("Xiaomi" , 2.0 , "android", "ada");
 
 
         System.out.println("ScreenSize: " + xiaomi.screenSize);
         System.out.println("System: " + xiaomi.Os);
 
-
+        audi.turnOn();
+        xiaomi.turnOn();
 
     }
 
