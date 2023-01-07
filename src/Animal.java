@@ -6,6 +6,8 @@ public class Animal {
 
     public Animal(String species) {
         this.species = species;
+        this.weight = 0.0;
+        this.alive = true;
     }
     public void feed(){
         if(this.alive == true) {

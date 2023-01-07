@@ -1,21 +1,23 @@
 public class Main {
     public static void main(String[] args) {
 
-        Car passat = new Car("vw", "passat", 2001);
-        passat.millage = 70000.0;
+        Car Audi = new Car("vw", "passat", 2001, "diesel", "blue");
+        Audi.millage = 70000.0;
 
-        System.out.println("Producent: " + passat.producer);
-        System.out.println("Model auta: " + passat.model);
-        System.out.println("Rok produkcji: " + passat.yearOfProduction);
-        System.out.println("Przebieg: " + passat.millage);
+        System.out.println("Producent: " + Audi.color);
+        System.out.println("Typ Paliwa: " + Audi.fuelType);
+        System.out.println("Przebieg: " + Audi.millage);
 
-        Car fiat = new Car("fiat","bravo",2010);
+
+
+        Car fiat = new Car("fiat","bravo",2010, "diesel", "black");
         fiat.millage = 312312.5;
         System.out.println();
-        System.out.println("Producent: " + fiat.producer);
-        System.out.println("Model auta: " + fiat.model);
-        System.out.println("Rok produkcji: " + fiat.yearOfProduction);
+        System.out.println("Producent: " + fiat.color);
+        System.out.println("Typ Paliwa: " + fiat.fuelType);
         System.out.println("Przebieg: " + fiat.millage);
+
+
 
         Animal kot = new Animal("Ssak");
         kot.name = "puszek";
@@ -38,6 +40,17 @@ public class Main {
         kot.takeForAWalk();
         kot.feed();
 
+
+        Human kacper = new Human("Kacper");
+        System.out.println(kacper.weight);
+        System.out.println(kacper.species);
+
+        Phone xiaomi  = new Phone ("Xiaomi" , "2" , "android", "ada");
+
+        System.out.println("model : " + xiaomi.model);
+        System.out.println("producer: " + xiaomi.producer);
+        System.out.println("ScreenSize: " + xiaomi.screenSize);
+        System.out.println("System: " + xiaomi.Os);
 
 
 
