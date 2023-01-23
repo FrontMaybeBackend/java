@@ -49,4 +49,6 @@ public class Car  extends Device implements Saleable{
     public Double getValue() {
         return value;
     }
+
+
 }

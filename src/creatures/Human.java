@@ -51,7 +51,7 @@ public class Human  extends Animal {
          } else if (salary > newCar.getValue()/12) {
              System.out.println("Udało się kupic auto na kredyt!");
              this.car=newCar;
-             
+
          }else{
              System.out.println("uzapisz się na studia i znajdź nową robotę albo idź po \n" +
                      "podwyżkę ");
@@ -59,4 +59,27 @@ public class Human  extends Animal {
 
 
     }
+
+    public boolean equals (Object o) {
+         if(o == this) {
+             return true;
+         }
+         if(!(o instanceof Car)){
+             return false;
+        }
+        Car car = (Car) o;
+        return Double.compare(car.value, ((Car) o).value) == 0;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "value =" + car.value +
+                '}';
+    }
+
+
+
 }

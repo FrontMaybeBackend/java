@@ -59,9 +59,13 @@ public class Main {
         audi.turnOn();
         xiaomi.turnOn();
 
+        Car bmw = new Car ("bmw", "x5", 2020, "diesel", "blue" );
+        Car porsche = new Car ("audi", "b5", 2019, "gas", "black");
+        Car bmw2 = new Car ("bmw", "x5", 2020,"diesel", "blue");
 
+         System.out.println("BMW VS BMW2" + bmw.equals(bmw2));
 
 
     }
-
 }
+
