@@ -8,6 +8,8 @@ public class Car  extends Device implements Saleable{
      public String fuelType;
      public Double millage;
 
+     public Double value;
+
     public Car(String producer, String model, Integer yearOfProduction, String fuelType, String color) {
         super("Audi", " 2010 ", "vw");
         this.millage = 0.0;
@@ -42,5 +44,9 @@ public class Car  extends Device implements Saleable{
            System.out.println("transkacja nie możliwa");
 
        }
+    }
+
+    public Double getValue() {
+        return value;
     }
 }

@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 public class Human  extends Animal {
     String firstName;
     String lastName;
-   public Car car;
+   private Car car;
     Phone phone;
     Animal pet;
 
@@ -38,5 +38,25 @@ public class Human  extends Animal {
         this.salary = newSalary;
     }
 
+    public Car getCar() {
+        return car;
+    }
 
+
+
+    public void setCar(Car newCar){
+         if(salary >= newCar.getValue()) {
+             System.out.println("Udało się kupić auto za gotówkę!");
+             this.car = newCar;
+         } else if (salary > newCar.getValue()/12) {
+             System.out.println("Udało się kupic auto na kredyt!");
+             this.car=newCar;
+             
+         }else{
+             System.out.println("uzapisz się na studia i znajdź nową robotę albo idź po \n" +
+                     "podwyżkę ");
+         }
+
+
+    }
 }
