@@ -24,7 +24,12 @@ public class Main {
 
 
 
-        Animal kot = new Animal("Ssak");
+        Animal kot = new Animal("Ssak") {
+            @Override
+            public void feed(int foodWeight) {
+
+            }
+        };
         kot.name = "puszek";
         kot.weight = 1.5;
         kot.alive = true;

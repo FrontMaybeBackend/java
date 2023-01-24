@@ -101,4 +101,8 @@ public class Human  extends Animal implements Saleable {
     }
 
 
+    @Override
+    public void feed(int foodWeight) {
+
+    }
 }

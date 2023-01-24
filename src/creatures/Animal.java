@@ -2,7 +2,7 @@ package creatures;
 
 import java.sql.SQLOutput;
 
-public class Animal {
+public abstract class Animal implements  Feedable {
   public  String species;
     public String name;
      public Double weight;
