@@ -1,7 +1,7 @@
 package device;
 
 import creatures.Human;
-import  device.Device;
+
 public class Car  extends Device implements Saleable{
    public String color;
 
@@ -9,6 +9,7 @@ public class Car  extends Device implements Saleable{
      public Double millage;
 
      public Double value;
+    private Human owner;
 
     public Car(String producer, String model, Integer yearOfProduction, String fuelType, String color) {
         super("Audi", " 2010 ", "vw");
@@ -38,12 +39,21 @@ public class Car  extends Device implements Saleable{
 
     @Override
     public void sell(Human seller, Human buyer, Double price) {
-       if(buyer.cash >=price){
-           System.out.println("możesz kupic!");
-       }else{
-           System.out.println("transkacja nie możliwa");
-
-       }
+            if (!seller.equals(this.owner)) {
+                System.out.println("Sprzedający nie posiada tego samochodu.");
+                return;
+            }
+            if (buyer.cash < price) {
+                System.out.println("Kupujący nie ma wystarczającej ilości gotówki.");
+                return;
+            }
+            if(seller instanceof  Human && !(buyer instanceof Human)){
+                throw new IllegalArgumentException("Tylko zakup samochodu jest możliwy, w tym komisie nie handlujemy ludźmi");
+            }
+            buyer.cash -= price;
+            seller.cash += price;
+        this.owner = buyer;
+        System.out.println("Transakcja przebiegła pomyślnie, nowy właściciel: " + buyer.getFirstName());
     }
 
     public Double getValue() {
@@ -51,4 +61,12 @@ public class Car  extends Device implements Saleable{
     }
 
 
+    public Human getOwner() {
+        return
+                owner;
+    }
+
+    public void setOwner(Human seller) {
+        this.owner = seller;
+    }
 }

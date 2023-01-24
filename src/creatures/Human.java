@@ -2,10 +2,11 @@ package creatures;
 
 import device.Car;
 import device.Phone;
+import device.Saleable;
 
 import java.time.LocalDateTime;
 
-public class Human  extends Animal {
+public class Human  extends Animal implements Saleable {
     String firstName;
     String lastName;
    private Car car;
@@ -14,13 +15,17 @@ public class Human  extends Animal {
 
    private Double salary;
     public Double cash;
+    private Human owner;
 
-     public Human (String firstName){
+    public Human (String firstName, Double cash){
          super("homo sapiens");
          this.salary  =0.0;
          this.firstName = firstName;
          this.weight = 70.0;
+         this.cash = cash;
      }
+
+
 
     public Double getSalary() {
          System.out.println("Data pobrania wynagrodzenia:" + LocalDateTime.now());
@@ -80,6 +85,20 @@ public class Human  extends Animal {
                 '}';
     }
 
+
+    public String getFirstName() {
+         return firstName;
+    }
+
+
+    public Double getCash() {
+         return cash;
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+
+    }
 
 
 }

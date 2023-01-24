@@ -46,7 +46,7 @@ public class Main {
         kot.feed();
 
 
-        Human kacper = new Human("Kacper");
+        Human kacper = new Human("Kacper",2000.0);
         System.out.println(kacper.weight);
         System.out.println(kacper.species);
 
@@ -64,6 +64,24 @@ public class Main {
         Car bmw2 = new Car ("bmw", "x5", 2020,"diesel", "blue");
 
          System.out.println("BMW VS BMW2" + bmw.equals(bmw2));
+
+        Human seller = new Human("Marcin", 6000.0);
+        Human buyer = new Human ("Kacper", 10000.0);
+        Car FIATOS = new Car("bmw", "bmw", 2020, "diesel", "blue");
+        FIATOS.setOwner(seller);
+
+
+          FIATOS.sell(seller,buyer,5000.0);
+        System.out.println("Seller name: " + seller.getFirstName() + " cash: " + seller.getCash());
+        System.out.println("Buyer name: " + buyer.getFirstName() + " cash: " + buyer.getCash());
+        System.out.println("Car owner name: " + FIATOS.getOwner().getFirstName());
+
+
+
+
+
+
+
 
     }
 }
