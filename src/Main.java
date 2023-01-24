@@ -3,6 +3,8 @@ import creatures.Human;
 import device.Car;
 import device.Phone;
 
+import java.net.URL;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -83,8 +85,8 @@ public class Main {
 
 
 
-
-
+      Phone iphone = new Phone ("xiaomi", 2.0, "ios", "xiaomi");
+      iphone.installAnApp("twitter","2", "https://twitter.com");
 
 
 
