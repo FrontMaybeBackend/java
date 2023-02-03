@@ -9,6 +9,7 @@ public abstract class Car  extends Device implements Saleable{
      public Double millage;
 
      public Double value;
+    public int year;
     private Human owner;
 
     public Car(String producer, String model, Integer yearOfProduction, String fuelType, String color) {
@@ -69,6 +70,5 @@ public abstract class Car  extends Device implements Saleable{
     public void setOwner(Human seller) {
         this.owner = seller;
     }
-
     public abstract void refuel();
 }

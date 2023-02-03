@@ -63,7 +63,17 @@ public class Main {
         kot.feed();
 
 
-        Human kacper = new Human("Kacper",2000.0);
+        Human kacper = new Human("Kacper", 2000.0) {
+            @Override
+            public void sell(Human seller, Human buyer, Double price) {
+
+            }
+
+            @Override
+            public void feed(int foodWeight) {
+
+            }
+        };
         System.out.println(kacper.weight);
         System.out.println(kacper.species);
 
@@ -97,8 +107,28 @@ public class Main {
 
          System.out.println("BMW VS BMW2" + bmw.equals(bmw2));
 
-        Human seller = new Human("Marcin", 6000.0);
-        Human buyer = new Human ("Kacper", 10000.0);
+        Human seller = new Human("Marcin", 6000.0) {
+            @Override
+            public void sell(Human seller, Human buyer, Double price) {
+
+            }
+
+            @Override
+            public void feed(int foodWeight) {
+
+            }
+        };
+        Human buyer = new Human("Kacper", 10000.0) {
+            @Override
+            public void sell(Human seller, Human buyer, Double price) {
+
+            }
+
+            @Override
+            public void feed(int foodWeight) {
+
+            }
+        };
         Car FIATOS = new Car("bmw", "bmw", 2020, "diesel", "blue") {
             @Override
             public void refuel() {

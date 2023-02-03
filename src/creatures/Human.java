@@ -5,31 +5,43 @@ import device.Phone;
 import device.Saleable;
 
 import java.time.LocalDateTime;
+import java.util.Arrays;
 
-public class Human  extends Animal implements Saleable {
+public abstract class Human extends Animal implements Saleable {
     String firstName;
     String lastName;
-   private Car car;
     Phone phone;
     Animal pet;
 
-   private Double salary;
+    private Double salary;
     public Double cash;
     private Human owner;
+    private String name;
 
-    public Human (String firstName, Double cash){
-         super("homo sapiens");
-         this.salary  =0.0;
-         this.firstName = firstName;
-         this.weight = 70.0;
-         this.cash = cash;
-     }
+    private Car[] garage;
+    private double value;
 
+    public Human(String firstName, Double cash) {
+        super("homo sapiens");
+        this.salary = 0.0;
+        this.firstName = firstName;
+        this.weight = 70.0;
+        this.cash = cash;
+        this.garage = new Car[1];
+    }
 
+    public Human(String firstName, Double cash, int garageSize) {
+        super("homo sapiens");
+        this.salary = 0.0;
+        this.firstName = firstName;
+        this.weight = 70.0;
+        this.cash = cash;
+        this.garage = new Car[garageSize];
+    }
 
     public Double getSalary() {
-         System.out.println("Data pobrania wynagrodzenia:" + LocalDateTime.now());
-         System.out.println("Wartość wynagrodzenia przed zwróceniem " + salary);
+        System.out.println("Data pobrania wynagrodzenia:" + LocalDateTime.now());
+        System.out.println("Wartość wynagrodzenia przed zwróceniem " + salary);
         return salary;
     }
 
@@ -43,66 +55,48 @@ public class Human  extends Animal implements Saleable {
         this.salary = newSalary;
     }
 
-    public Car getCar() {
-        return car;
+    public Car getCar(int parkingSpot) {
+        return garage[parkingSpot];
     }
 
-
-
-    public void setCar(Car newCar){
-         if(salary >= newCar.getValue()) {
-             System.out.println("Udało się kupić auto za gotówkę!");
-             this.car = newCar;
-         } else if (salary > newCar.getValue()/12) {
-             System.out.println("Udało się kupic auto na kredyt!");
-             this.car=newCar;
-
-         }else{
-             System.out.println("uzapisz się na studia i znajdź nową robotę albo idź po \n" +
-                     "podwyżkę ");
-         }
-
-
+    public void setCar(int parkingSpot, Car car) {
+        garage[parkingSpot] = car;
     }
 
-    public boolean equals (Object o) {
-         if(o == this) {
-             return true;
-         }
-         if(!(o instanceof Car)){
-             return false;
+    public Double valueOfCars() {
+        double sum = 0.0;
+        for (Car car : garage) {
+            if (car != null) {
+                sum += car.value;
+            }
         }
-        Car car = (Car) o;
-        return Double.compare(car.value, ((Car) o).value) == 0;
+        return sum;
     }
 
-
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "value =" + car.value +
-                '}';
+    public void sortCarsByYear() {
+        Arrays.sort(garage, (a, b) -> {
+            if (a != null && b != null) {
+                return Integer.compare(a.year, b.year);
+            } else if (a == null) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
     }
 
+    public void sell(Human buyer, Double price) throws Exception {
+        if (price > this.value) {
+            throw new Exception("Sprzedający nie posiada samochodu");
+        }
+        int freeSpot = -1;
+    }
 
     public String getFirstName() {
-         return firstName;
+        return this.firstName;
     }
-
 
     public Double getCash() {
-         return cash;
-    }
-
-    @Override
-    public void sell(Human seller, Human buyer, Double price) {
-
-    }
-
-
-    @Override
-    public void feed(int foodWeight) {
-
+        return this.cash;
     }
 }
