@@ -23,6 +23,6 @@ public abstract class Device {
         }
 
         public abstract void turnOn();
-
+//Jest dodana klasa device, tylko na gita nie wyslałem !
 
 }
