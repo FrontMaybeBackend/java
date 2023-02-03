@@ -2,7 +2,7 @@ package device;
 
 import creatures.Human;
 
-public class Car  extends Device implements Saleable{
+public abstract class Car  extends Device implements Saleable{
    public String color;
 
      public String fuelType;
@@ -69,4 +69,6 @@ public class Car  extends Device implements Saleable{
     public void setOwner(Human seller) {
         this.owner = seller;
     }
+
+    public abstract void refuel();
 }
